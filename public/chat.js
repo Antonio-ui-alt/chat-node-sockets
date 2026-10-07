@@ -47,17 +47,17 @@ function reproducirSonido() {
     oscilador.connect(ganancia);
     ganancia.connect(audioContext.destination);
 
-    oscilador.frequency.value = 600;
-    ganancia.gain.value = 0.1;
+    oscilador.frequency.value = 800;
+    ganancia.gain.value = 0.5;
 
     oscilador.start();
 
     ganancia.gain.exponentialRampToValueAtTime(
         0.001,
-        audioContext.currentTime + 0.2
+        audioContext.currentTime + 0.35
     );
 
-    oscilador.stop(audioContext.currentTime + 0.2);
+    oscilador.stop(audioContext.currentTime + 0.35);
 }
 
 
